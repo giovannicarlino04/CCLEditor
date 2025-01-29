@@ -1,0 +1,10 @@
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\bin\Debug\CCLEditor.exe.config
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\bin\Debug\CCLEditor.exe
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\bin\Debug\CCLEditor.pdb
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.csproj.AssemblyReference.cache
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.Form1.resources
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.Properties.Resources.resources
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.csproj.GenerateResource.cache
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.csproj.CoreCompileInputs.cache
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.exe
+C:\Users\Carli\Desktop\Repositories\CCLEditor\CCLEditor\obj\Debug\CCLEditor.pdb
