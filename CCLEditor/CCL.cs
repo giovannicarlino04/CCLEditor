@@ -62,8 +62,6 @@ namespace CCLEditor
             if (Entries == null || Entries.Length == 0)
                 throw new InvalidOperationException("No entries to save.");
 
-            byte[] fileData = File.ReadAllBytes(fileName);
-
             using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Write))
             using (BinaryWriter bw = new BinaryWriter(fs))
             {
@@ -71,16 +69,18 @@ namespace CCLEditor
 
                 for (int i = 0; i < slotCount; i++)
                 {
-                    fs.Seek(offset + (entrySize * i) + 2, SeekOrigin.Begin);
+                    fs.Seek(offset + (entrySize * i), SeekOrigin.Begin);
+
+                    bw.Write(Entries[i].Padding);
 
                     byte[] nameBytes = Encoding.Default.GetBytes(Entries[i].shortName.PadRight(3, '\0').Substring(0, 3));
                     bw.Write(nameBytes);
 
-                    fs.Seek(9, SeekOrigin.Current);
-
+                    bw.Write(Entries[i].nullterm);
+                    bw.Write(Entries[i].Padding1);
                     bw.Write(Entries[i].Unknown);
-
-                    fs.Seek(6, SeekOrigin.Current);
+                    bw.Write(Entries[i].Unknown2);
+                    bw.Write(Entries[i].Padding2);
                 }
             }
         }

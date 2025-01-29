@@ -28,7 +28,7 @@ namespace CCLEditor
             textBox2.Text = "";
             foreach (Entry entry in ccl.Entries)
             {
-                cbEntries.Items.Add($"Character {entry.shortName} \t {entry.Unknown.ToString()}");
+                cbEntries.Items.Add($"Character: {entry.shortName} \t Unk1: {entry.Unknown.ToString()} \t Unk2: {entry.Unknown2.ToString()}");
             }
         }
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,7 +95,9 @@ namespace CCLEditor
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if (ccl == null || cbEntries.SelectedIndex == -1)
+                return;
+            ccl.Entries[cbEntries.SelectedIndex].Unknown = Int32.Parse(textBox2.Text);
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
